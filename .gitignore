@@ -17,6 +17,7 @@ Thumbs.db
 .DS_Store
 config/database.yml
 config/env.yml
+config/app_config.yml
 *.log
 tmp/
 *.sql
@@ -34,4 +35,3 @@ public/uploads
 
 ## UNIX TEMP FILES
 *~
-
