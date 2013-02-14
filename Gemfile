@@ -34,7 +34,7 @@ gem 'simple_form'
 gem 'thin'
 gem 'bootstrap-sass', '~> 2.2.2.0' # must specify version
 
-group :development do
+group :development, :staging do
   gem 'hirb'
   gem 'wirble'
   gem 'wirb'
@@ -52,9 +52,9 @@ group :test do
 end
 
 # Both test and development
-gem "awesome_print", :group => [:development, :test]
-gem 'factory_girl_rails', :group => [:development, :test]
-gem 'faker', :group => [:development, :test]
+gem "awesome_print", :group => [:development, :test, :staging]
+gem 'factory_girl_rails', :group => [:development, :test, :staging]
+gem 'faker', :group => [:development, :test, :staging]
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
