@@ -5,7 +5,7 @@ gem 'rails', '3.2.12'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+gem 'mysql2'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -72,7 +72,7 @@ gem 'capistrano'
 # gem 'debugger'
 
 group :production do
-  gem 'mysql2' # If using mysql in development, this can be outside the production group.
+  # gem 'mysql2' # If using mysql in development, this can be outside the production group.
   gem 'therubyracer'
 end
 
