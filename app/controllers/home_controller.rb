@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
 
   def index
-    flash.now[:notice] = "Welcome!"
+    @users = User.all
   end
 
 end
