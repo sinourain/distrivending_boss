@@ -13,11 +13,11 @@
     /[if lt IE 9]
       /%script{:src => "assets/javascripts/html5shiv.js"}
     / Fav and touch icons
-    /%link{:href => "../assets/ico/apple-touch-icon-144-precomposed.png", :rel => "apple-touch-icon-precomposed", :sizes => "144x144"}/
-    /%link{:href => "../assets/ico/apple-touch-icon-114-precomposed.png", :rel => "apple-touch-icon-precomposed", :sizes => "114x114"}/
-    /%link{:href => "../assets/ico/apple-touch-icon-72-precomposed.png", :rel => "apple-touch-icon-precomposed", :sizes => "72x72"}/
-    /%link{:href => "../assets/ico/apple-touch-icon-57-precomposed.png", :rel => "apple-touch-icon-precomposed"}/
-    /%link{:href => "../assets/ico/favicon.png", :rel => "shortcut icon"}/
+    %link{:href => "assets/images/rails.png", :rel => "apple-touch-icon-precomposed", :sizes => "144x144"}/
+    %link{:href => "../assets/ico/apple-touch-icon-114-precomposed.png", :rel => "apple-touch-icon-precomposed", :sizes => "114x114"}/
+    %link{:href => "../assets/ico/apple-touch-icon-72-precomposed.png", :rel => "apple-touch-icon-precomposed", :sizes => "72x72"}/
+    %link{:href => "../assets/ico/apple-touch-icon-57-precomposed.png", :rel => "apple-touch-icon-precomposed"}/
+    %link{:href => "assets/images/rails.png", :rel => "shortcut icon"}/
   %body
     .navbar.navbar-inverse.navbar-fixed-top
       .navbar-inner
@@ -36,27 +36,27 @@
               %li
                 %a{:href => "#contact"} Contactanos
               %li.dropdown
-                %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#tienda"}
                   Tienda
                   %b.caret
-                %ul.dropdown-menu
-                  %li
-                    %a{:href => "#"} Action
-                  %li
-                    %a{:href => "#"} Another action
-                  %li
-                    %a{:href => "#"} Something else here
-                  %li.divider
-                  %li.nav-header Nav header
-                  %li
-                    %a{:href => "#"} Separated link
-                  %li
-                    %a{:href => "#"} One more separated link
+                  %ul.dropdown-menu
+                    %li
+                      %a{:href => "#"} Action
+                    %li
+                      %a{:href => "#"} Another action
+                    %li
+                      %a{:href => "#"} Something else here
+                    %li.divider
+                    %li.nav-header Nav header
+                    %li
+                      %a{:href => "#"} Separated link
+                    %li
+                      %a{:href => "#"} One more separated link
             %form.navbar-form.pull-right
-              /%input.span2{:placeholder => "Correo", :type => "text"}
-              /%input.span2{:placeholder => "Contraseña", :type => "password"}
+              %input.span2{:placeholder => "Correo", :type => "text"}
+              %input.span2{:placeholder => "Contraseña", :type => "password"}
               %button.btn{:type => "submit"}
-                %a{:href => "#"} Acceder
+                %a{:href => new_user_session_path} Acceder
               %button.btn{:type => "submit"}
                 %a{:href => new_user_registration_path} Registrarse
           / /.nav-collapse

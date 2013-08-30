@@ -1,6 +1,3 @@
-# Sample localization file for Spanish. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 es:
   date:
     abbr_day_names:
@@ -123,7 +120,7 @@ es:
       too_short: es demasiado corto (%{count} caracteres mínimo)
       wrong_length: no tiene la longitud correcta (%{count} caracteres exactos)
     template:
-      body: ! Se encontraron problemas con los siguientes campos:
+      body: ! 'Se encontraron problemas con los siguientes campos:'
       header:
         one: No se pudo guardar este/a %{model} porque se encontró 1 error
         other: No se pudo guardar este/a %{model} porque se encontraron %{count} errores
@@ -140,14 +137,14 @@ es:
         delimiter: .
         format: ! '%n %u'
         precision: 2
-        separator: ! ,
+        separator: ! ','
         significant: false
         strip_insignificant_zeros: false
-        unit: $
+        unit: €
     format:
       delimiter: .
       precision: 3
-      separator: ! ',
+      separator: ! ','
       significant: false
       strip_insignificant_zeros: false
     human:
@@ -185,7 +182,7 @@ es:
     array:
       last_word_connector: ! ', y '
       two_words_connector: ! ' y '
-      words_connector: ! ,
+      words_connector: ! ', '
   time:
     am: am
     formats:
