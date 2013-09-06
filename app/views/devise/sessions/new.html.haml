@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .span3
 .container-fluid
   .row-fluid
@@ -27,3 +28,19 @@
             %input#sign-in-twitter.btn.btn-primary{:type => "button", :value => "Sign In with Twitter"}/
             %p.active
             %input#sign-in-google.btn.btn-primary{:type => "button", :value => "Sign In with Google"}/
+=======
+%h2 Sign in
+
+= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+  %p email
+  %p= f.text_field :email
+  %p password
+  %p= f.password_field :password
+  - if devise_mapping.rememberable?
+    %p
+      = f.check_box :remember_me
+      remember_me
+  %p= f.submit "Sign in"
+
+= render :partial => "devise/shared/links"
+>>>>>>> 68b9d41b90dd00473507375b56552f329277bc0b

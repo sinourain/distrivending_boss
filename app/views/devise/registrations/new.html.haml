@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .span3
 .container-fluid
   .row-fluid
@@ -27,3 +28,27 @@
             %input#sign-in-twitter.btn.btn-primary{:type => "button", :value => "Sign Up with Twitter"}/
             %p.active
             %input#sign-in-google.btn.btn-primary{:type => "button", :value => "Sign Up with Google"}/
+=======
+%h2 Sign up
+= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+  = devise_error_messages!
+  %div
+    %p username
+    %br/
+    = f.text_field :username, :autofocus => true
+  %div
+    %p email
+    %br/
+    = f.email_field :email, :autofocus => true
+  %div
+    %p password
+    %br/
+    = f.password_field :password
+  %div
+    %p password_confirmation
+    %br/
+    = f.password_field :password_confirmation
+  %div= f.submit "Sign up"
+
+= render "devise/shared/links"
+>>>>>>> 68b9d41b90dd00473507375b56552f329277bc0b
