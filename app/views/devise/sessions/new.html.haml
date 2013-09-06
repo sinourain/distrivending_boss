@@ -1,12 +1,29 @@
-%h2 Sign in
-= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
-  %p email
-  %p= f.text_field :email
-  %p password
-  %p= f.password_field :password
-  - if devise_mapping.rememberable?
-    %p
-      = f.check_box :remember_me
-      remember_me
-  %p= f.submit "Sign in"
-= render :partial => "devise/shared/links"
+.span3
+.container-fluid
+  .row-fluid
+    .span5
+      .hero-unit
+        %h2.pagination-centered Sign in
+        = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+          %p.span2 email
+          %p= f.text_field :email
+          %p.span2 password
+          %p= f.password_field :password
+          - if devise_mapping.rememberable?
+            %p.span
+              = f.check_box :remember_me
+              remember_me
+            %a.span6
+            %btn.btn-primary= f.submit "Sign in"
+        = render :partial => "devise/shared/links"
+    .span3
+      .well.sidebar-nav
+        %ul.nav.nav-list
+          %li.nav-header.pagination-centered sign in with
+          %label{:style => "text-align:center;margin-top:5px"}
+            %p.active
+            %input#sign-in-facebook.btn.btn-primary{:type => "button", :value => "Sign In with Facebook"}/
+            %p.active
+            %input#sign-in-twitter.btn.btn-primary{:type => "button", :value => "Sign In with Twitter"}/
+            %p.active
+            %input#sign-in-google.btn.btn-primary{:type => "button", :value => "Sign In with Google"}/

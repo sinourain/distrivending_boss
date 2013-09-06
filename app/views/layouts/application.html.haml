@@ -6,29 +6,74 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
+    .navbar.navbar-inverse.navbar-fixed-top
+      .navbar-inner
+        .container-fluid
+          %button.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse", :type => "button"}
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.brand{:href => "/home/index"} distrivending
+          .nav-collapse.collapse
+            %ul.nav
+              %li.active
+                %a{:href => "/home/index"} Home
+              %li
+                %a{:href => "#about"} About
+              %li
+                %a{:href => "#contact"} Contact
+              %li.dropdown
+                %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                  Dropdown
+                  %b.caret
+                %ul.dropdown-menu
+                  %li
+                    %a{:href => "#"} Action
+                  %li
+                    %a{:href => "#"} Another action
+                  %li
+                    %a{:href => "#"} Something else here
+                  %li.divider
+                  %li.nav-header Nav header
+                  %li
+                    %a{:href => "#"} Separated link
+                  %li
+                    %a{:href => "#"} One more separated link
+            %ul.nav.pull-right
+              %ul.nav
+                - if user_signed_in?
+                  %li.active
+                    %a{:href => edit_user_registration_path} Edit profile
+                  %li.active
+                    \#{link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'}
+                - else
+                  %li.divider-vertical
+                    %li.dropdown
+                      %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                        Sign In
+                        %strong.caret
+                      .dropdown-menu{:style => "padding: 15px; padding-bottom: 0px;"}
+                        %form{"accept-charset" => "UTF-8", :action => new_user_session_path, :method => "post"}
+                          %input#email{:name => "email", :placeholder => "Email", :style => "margin-bottom: 15px;", :type => "email"}/
+                          %input#password{:name => "password", :placeholder => "Password", :style => "margin-bottom: 15px;", :type => "password"}/
+                          %input#remember-me{:name => "remember-me", :style => "float: left; margin-right: 10px;", :type => "checkbox", :value => "1"}/
+                          %label.string.optional{:for => "user_remember_me"} Remember me
+                          %input#sign-in.btn.btn-primary.btn-block{:type => "submit", :value => "Sign In"}/
+                          %label{:style => "text-align:center;margin-top:5px"} or
+                          %input#sign-in-facebook.btn.btn-primary.btn-block{:type => "button", :value => "Sign In with Facebook"}/
+                          %input#sign-in-twitter.btn.btn-primary.btn-block{:type => "button", :value => "Sign In with Twitter"}/
+                          %input#sign-in-google.btn.btn-primary.btn-block{:type => "button", :value => "Sign In with Google"}/
+                  %li.active.span3
+                    %a{:href => new_user_registration_path} Sign up
+                  /%li.active
+                  /  %a{:href => new_user_session_path} Login
+              %form.navbar-text.pull-right
+                - if user_signed_in?
+                  Logged in as
+                  = succeed "." do
+                    %strong= current_user.email
+          / /.nav-collapse
+      / /.container-fluid
     %p.notice= notice
     %p.alert= alert
-    %p.navbar-text.pull-right
-      - if user_signed_in?
-        Logged in as
-        = succeed "." do
-          %strong= current_user.email
-        = link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link'
-        |
-        \#{link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'}
-      - else
-        = link_to "Sign up", new_user_registration_path, :class => 'navbar-link'
-        |
-        \#{link_to "Login", new_user_session_path, :class => 'navbar-link'}
-
-    = yield
-
-
-/<div id="user_nav">
-/  <% if user_signed_in? %>
-/    Signed in as <%= current_user.email %>. Not you?
-/    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-/  <% else %>
-/    <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
-/  <% end %>
-/</div>
+= yield

@@ -7,7 +7,7 @@
     %meta{:content => "", :name => "description"}/
     %meta{:content => "So&Co company", :name => "author"}/
     / Le styles
-    %link{:href => "assets/stylesheets/css/bootstrap.css", :rel => "stylesheet"}
+    /%link{:href => "assets/stylesheets/css/bootstrap.css", :rel => "stylesheet"}
     %link{:href => "assets/css/bootstrap-responsive.css", :rel => "stylesheet"}
     / HTML5 shim, for IE6-8 support of HTML5 elements
     /[if lt IE 9]
@@ -19,47 +19,6 @@
     %link{:href => "../assets/ico/apple-touch-icon-57-precomposed.png", :rel => "apple-touch-icon-precomposed"}/
     %link{:href => "assets/images/rails.png", :rel => "shortcut icon"}/
   %body
-    .navbar.navbar-inverse.navbar-fixed-top
-      .navbar-inner
-        .container
-          %button.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse", :type => "button"}
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
-          %a.brand{:href => "#"} distrivending
-          .nav-collapse.collapse
-            %ul.nav
-              %li.active
-                %a{:href => "#"} Inicio
-              %li
-                %a{:href => "#about"} Acerca de
-              %li
-                %a{:href => "#contact"} Contactanos
-              %li.dropdown
-                %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-                  Dropdown
-                  %b.caret
-                %ul.dropdown-menu
-                  %li
-                    %a{:href => "#"} Action
-                  %li
-                    %a{:href => "#"} Another action
-                  %li
-                    %a{:href => "#"} Something else here
-                  %li.divider
-                  %li.nav-header Nav header
-                  %li
-                    %a{:href => "#"} Separated link
-                  %li
-                    %a{:href => "#"} One more separated link
-            %form.navbar-form.pull-right
-              %input.span3{:placeholder => :email, :type => "text"}
-              %input.span2{:placeholder => :password, :type => "password"}
-              %button.btn{:type => "submit"}
-                %a{:href => new_user_session_path} Acceder
-              %button.btn{:type => "submit"}
-                %a{:href => new_user_registration_path} Registrarse
-          / /.nav-collapse
     .container
       / Main hero unit for a primary marketing message or call to action
       .hero-unit
@@ -92,16 +51,16 @@
       Le javascript
       \==================================================
     / Placed at the end of the document so the pages load faster
-    %script{:src => "../assets/js/jquery.js"}
-    %script{:src => "../assets/js/bootstrap-transition.js"}
-    %script{:src => "../assets/js/bootstrap-alert.js"}
-    %script{:src => "../assets/js/bootstrap-modal.js"}
-    %script{:src => "../assets/js/bootstrap-dropdown.js"}
-    %script{:src => "../assets/js/bootstrap-scrollspy.js"}
-    %script{:src => "../assets/js/bootstrap-tab.js"}
-    %script{:src => "../assets/js/bootstrap-tooltip.js"}
-    %script{:src => "../assets/js/bootstrap-popover.js"}
-    %script{:src => "../assets/js/bootstrap-button.js"}
-    %script{:src => "../assets/js/bootstrap-collapse.js"}
-    %script{:src => "../assets/js/bootstrap-carousel.js"}
-    %script{:src => "../assets/js/bootstrap-typeahead.js"}
+    /%script{:src => "../assets/js/jquery.js"}
+    /%script{:src => "../assets/js/bootstrap-transition.js"}
+    /%script{:src => "../assets/js/bootstrap-alert.js"}
+    /%script{:src => "../assets/js/bootstrap-modal.js"}
+    /%script{:src => "../assets/js/bootstrap-dropdown.js"}
+    /%script{:src => "../assets/js/bootstrap-scrollspy.js"}
+    /%script{:src => "../assets/js/bootstrap-tab.js"}
+    /%script{:src => "../assets/js/bootstrap-tooltip.js"}
+    /%script{:src => "../assets/js/bootstrap-popover.js"}
+    /%script{:src => "../assets/js/bootstrap-button.js"}
+    /%script{:src => "../assets/js/bootstrap-collapse.js"}
+    /%script{:src => "../assets/js/bootstrap-carousel.js"}
+    /%script{:src => "../assets/js/bootstrap-typeahead.js"}

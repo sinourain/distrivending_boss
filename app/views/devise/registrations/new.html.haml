@@ -1,17 +1,29 @@
-%h2 Sign up
-= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
-  = devise_error_messages!
-  %div
-    %p email
-    %br/
-    = f.email_field :email, :autofocus => true
-  %div
-    %p password
-    %br/
-    = f.password_field :password
-  %div
-    %p password_confirmation
-    %br/
-    = f.password_field :password_confirmation
-  %div= f.submit "Sign up"
-= render "devise/shared/links"
+.span3
+.container-fluid
+  .row-fluid
+    .span5
+      .hero-unit
+        %h2.pagination-centered Sign up
+        = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+          = devise_error_messages!
+          .span2
+          %p email
+          = f.email_field :email, :autofocus => true
+          %p password
+          %p= f.password_field :password
+          %p password_confirmation
+          = f.password_field :password_confirmation
+          %a
+          %btn.btn-primary= f.submit "Sign up"
+        = render :partial => "devise/shared/links"
+    .span3
+      .well.sidebar-nav
+        %ul.nav.nav-list
+          %li.nav-header.pagination-centered sign up with
+          %label{:style => "text-align:center;margin-top:5px"}
+            %p.active
+            %input#sign-in-facebook.btn.btn-primary{:type => "button", :value => "Sign Up with Facebook"}/
+            %p.active
+            %input#sign-in-twitter.btn.btn-primary{:type => "button", :value => "Sign Up with Twitter"}/
+            %p.active
+            %input#sign-in-google.btn.btn-primary{:type => "button", :value => "Sign Up with Google"}/
