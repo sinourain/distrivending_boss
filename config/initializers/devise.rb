@@ -207,6 +207,9 @@ Devise.setup do |config|
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', :scope => 'user,public_repo'
 
+  config.omniauth :twitter, 'jK89Bm5q1vB3iusRT6mQSg', 'HRQObQyhLBD0vFf9fWcUApXSnSdYrcuSu8xE397ryc'
+  config.omniauth :facebook, '546864875368315', 'ee508f9866fe724be50209eef3097be0', {:scope => 'publish_stream, email'}
+
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.
@@ -228,5 +231,5 @@ Devise.setup do |config|
   #
   # When using omniauth, Devise cannot automatically set Omniauth path,
   # so you need to do it manually. For the users scope, it would be:
-  # config.omniauth_path_prefix = "/my_engine/users/auth"
+   #config.omniauth_path_prefix = "/my_engine/users/auth"
 end

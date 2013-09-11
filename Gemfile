@@ -78,6 +78,13 @@ group :production do
   gem 'therubyracer'
 end
 
+# To use Authentication with multi providers: Facebook, Twitter, etc
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem 'twitter'
+gem 'fb_graph'
 
+# To have more control about the scaffold generator
+gem 'nifty-generators'
 
-
+gem "mocha", :group => :test
